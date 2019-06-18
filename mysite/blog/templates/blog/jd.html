@@ -1,0 +1,11 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}京东{% endblock %}
+{% block content %}
+    <h1 align="center" style="font-size:xx-large;font-family:华文彩云;color:#3366FF">手机列表</h1>
+    {% for phone in phones %}
+    <p align="center" style="font-size:x-large;font-family:华文行楷;color:#6699FF">编号：{{phone.mNo}}&nbsp&nbsp品牌：{{phone.mMark}}&nbsp&nbsp价格：{{phone.mPrice}}</p>
+    <p align="center" style="font-size:large;font-family:华文琥珀;color:#003399">详情：{{phone.mNote}} </p>
+    <br>
+    {% endfor %}
+{% endblock %}

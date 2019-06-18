@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}电影{% endblock %}
+{% block content %}
+    <h1 align="center" style="font-size:xx-large;font-family:华文彩云;color:#CC6699">电影列表</h1>
+    {% for movie in movies %}
+    <p align="center" style="font-size:x-large;font-family:华文行楷;color:#FF3366">地址：{{movie.film_addr}}&nbsp&nbsp{{movie.name}}&nbsp&nbsp{{movie.prod_year}}</p>
+    <p align="center" style="font-size:large;font-family:华文新魏;color:#FF0099">{{movie.ori_name}} &nbsp&nbsp{{movie.prod_country}} &nbsp&nbsp{{movie.ori_name}}</p>
+    <p align="center" style="font-size:medium;font-family:华文琥珀;color:#CC3366">{{movie.language}} &nbsp&nbsp{{movie.score}}</p>
+    <br>
+{% endfor %}
+
+{% endblock %}
